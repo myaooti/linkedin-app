@@ -136,7 +136,8 @@ app.controller('ShareController', function($rootScope, $scope) {
           .error(onError);
 
         function onSuccess(response) {
-            $scope.message = 'Success! View the content you posted at <a href="' + response.updateUrl + '">' + response.updateUrl + '</a>';
+            $scope.message = 'Success! View the post on LinkedIn at the link below.';
+            $scope.postLink = response.updateUrl;
             console.log(response);
             $scope.$apply();
         }

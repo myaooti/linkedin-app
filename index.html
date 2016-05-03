@@ -1,23 +1,41 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
 		<title>LinkedIn App</title>
 		<script src="bower_components/angular/angular.js"></script>
 		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 		<script src="bower_components/angular-resource/angular-resource.js"></script>
-		<script src="index.js"></script>
 		<script type="text/javascript" src="//platform.linkedin.com/in.js">
-		    api_key:   77xkk5q1ej3v6z
-		    onLoad:    onLinkedInLoad
-		    authorize: true
+			api_key:   77xkk5q1ej3v6z
+			onLoad:    onLinkedInLoad
+			authorize: true
 		</script>
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="index.js"></script>
 	</head>
 	<body ng-app="mainApp">
-		<div id="wrap" ng-controller="MainController">
-			<base href="/">
-			<h1>Simple LinkedIn App</h1>
-			<span>Menu: </span><a href="/home">Home</a>&nbsp;&nbsp;<a href="/profile">View My Profile</a>&nbsp;&nbsp;<a href="/share">Share A Post</a>
-			
-			<div ui-view></div>
+		<div id="wrap" class="container" ng-controller="MainController">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <base href="/">
+                    <h1>Simple LinkedIn App</h1>
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-collapse collapse">
+                                <ul class="navbar-nav nav">
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/profile">View My Profile</a></li>
+                                    <li><a href="/share">Share A Post</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div ui-view></div>
+                </div>
+            </div>
 		</div>
 	</body>
 </html>

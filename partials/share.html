@@ -1,7 +1,31 @@
 <div ng-controller="ShareController">
-	<h2>Share A Post</h2>
-	<span>Post content: </span><textarea ng-model="content"></textarea><br>
-	<button ng-click="share()">Share</button>
-	<br>
-	<div ng-bind-html="message"></div>
+	<div class="row">
+        <div class="col-lg-8">
+            <h2>Share A Post</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <p>Share a simple text post on your LinkedIn profile.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <span>Post content: </span>
+        </div>
+        <div class="col-md-6">
+            <textarea ng-model="content"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <button type="button" id="share" class="btn btn-primary" ng-click="share()">Share</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <span ng-bind="message"></span>
+            <a ng-href="{{ postLink }}" ng-bind="postLink"></a>
+        </div>
+    </div>
 </div>
