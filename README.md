@@ -10,7 +10,7 @@ All cross-origin communication is wrapped in LinkedIn's [JavaScript SDK](https:/
 
 Setup
 * Clone this repository `git clone https://github.com/nickfaughey/linkedin-app.git`
-* Install dependencies `npm install`
+* Install dependencies `npm install` then `bower install`
 * Start the NodeJS/Express server `npm run server`
 * Visit the app in browser at [http://localhost:8000](http://localhost:8000)
 
