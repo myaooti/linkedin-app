@@ -10,13 +10,14 @@
 		    onLoad:    onLinkedInLoad
 		    authorize: true
 		</script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
 	</head>
 	<body ng-app="mainApp">
 		<div id="wrap" ng-controller="MainController">
 			<base href="/">
 			<h1>Simple LinkedIn App</h1>
 			<span>Menu: </span><a href="/home">Home</a>&nbsp;&nbsp;<a href="/profile">View My Profile</a>&nbsp;&nbsp;<a href="/share">Share A Post</a>
-			
+
 			<div ui-view></div>
 		</div>
 	</body>
