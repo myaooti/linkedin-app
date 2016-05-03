@@ -1,0 +1,7 @@
+<div ng-controller="ShareController">
+	<h2>Share A Post</h2>
+	<span>Post content: </span><textarea ng-model="content"></textarea><br>
+	<button ng-click="share()">Share</button>
+	<br>
+	<div ng-bind-html="message"></div>
+</div>
